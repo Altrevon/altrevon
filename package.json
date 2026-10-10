@@ -1,0 +1,21 @@
+{
+  "name": "nexora",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Nexora company website — Next.js frontend + Express API",
+  "scripts": {
+    "dev": "concurrently -n api,web -c teal,green \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "dev:api": "npm run dev --prefix backend",
+    "dev:web": "npm run dev --prefix frontend",
+    "build": "npm run build --prefix frontend",
+    "start": "concurrently -n api,web -c teal,green \"npm run start --prefix backend\" \"npm run start --prefix frontend\"",
+    "lint": "npm run lint --prefix frontend",
+    "typecheck": "npm run build --prefix frontend"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

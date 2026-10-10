@@ -1,0 +1,310 @@
+@import "tailwindcss";
+
+:root,
+html.light {
+  --ink: #031512;
+  --ink-soft: #1a3530;
+  --jade: #0f6b5c;
+  --jade-bright: #0d9f7a;
+  --mist: #e8f0ec;
+  --mist-deep: #5a736c;
+  --paper: #f3f7f5;
+  --surface: #ffffff;
+  --surface-2: #e8f0ec;
+  --line: rgba(3, 21, 18, 0.12);
+  --line-strong: rgba(13, 159, 122, 0.35);
+  --muted: #5a736c;
+  --glow: rgba(13, 159, 122, 0.18);
+  --on-accent: #031512;
+  --header-bg: rgba(243, 247, 245, 0.86);
+  --header-bg-scrolled: rgba(243, 247, 245, 0.94);
+  --trust-bg: #e4eee9;
+  --footer-bg: #e8f0ec;
+  --hero-overlay: linear-gradient(105deg, rgba(243, 247, 245, 0.94) 0%, rgba(243, 247, 245, 0.78) 48%, rgba(243, 247, 245, 0.5) 100%);
+  --hero-atmosphere:
+    radial-gradient(ellipse 70% 55% at 78% 18%, rgba(13, 159, 122, 0.14), transparent 58%),
+    radial-gradient(ellipse 45% 40% at 8% 78%, rgba(15, 107, 92, 0.1), transparent 55%),
+    linear-gradient(165deg, #f3f7f5 0%, #e8f0ec 42%, #f7faf8 100%);
+  --selection-fg: #031512;
+  color-scheme: light;
+}
+
+html.dark {
+  --ink: #f2f7f5;
+  --ink-soft: #c5d5cf;
+  --jade: #3ecfad;
+  --jade-bright: #2dd4a8;
+  --mist: #e8f0ec;
+  --mist-deep: #9bb5ac;
+  --paper: #070f0d;
+  --surface: #0d1916;
+  --surface-2: #122420;
+  --line: rgba(242, 247, 245, 0.1);
+  --line-strong: rgba(45, 212, 168, 0.28);
+  --muted: #8aa39a;
+  --glow: rgba(45, 212, 168, 0.22);
+  --on-accent: #031512;
+  --header-bg: rgba(7, 15, 13, 0.78);
+  --header-bg-scrolled: rgba(7, 15, 13, 0.92);
+  --trust-bg: #040a08;
+  --footer-bg: #040a08;
+  --hero-overlay: linear-gradient(105deg, rgba(7, 15, 13, 0.92) 0%, rgba(7, 15, 13, 0.72) 48%, rgba(7, 15, 13, 0.45) 100%);
+  --hero-atmosphere:
+    radial-gradient(ellipse 70% 55% at 78% 18%, rgba(45, 212, 168, 0.14), transparent 58%),
+    radial-gradient(ellipse 45% 40% at 8% 78%, rgba(15, 107, 92, 0.18), transparent 55%),
+    linear-gradient(165deg, #070f0d 0%, #0b1714 42%, #0a1411 100%);
+  --selection-fg: #031512;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-ink: var(--ink);
+  --color-ink-soft: var(--ink-soft);
+  --color-jade: var(--jade);
+  --color-jade-bright: var(--jade-bright);
+  --color-mist: var(--mist);
+  --color-mist-deep: var(--mist-deep);
+  --color-paper: var(--paper);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-muted: var(--muted);
+  --color-on-accent: var(--on-accent);
+  --font-sans: var(--font-sora);
+  --font-display: var(--font-instrument);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.focus\:not-sr-only:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-sora), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+::selection {
+  background: rgba(45, 212, 168, 0.3);
+  color: var(--selection-fg);
+}
+
+.font-display {
+  font-family: var(--font-instrument), Georgia, serif;
+}
+
+.grain {
+  position: relative;
+}
+
+.grain::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.hero-atmosphere {
+  background: var(--hero-atmosphere);
+}
+
+.hero-overlay {
+  background: var(--hero-overlay);
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(color-mix(in oklab, var(--ink) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in oklab, var(--ink) 6%, transparent) 1px, transparent 1px);
+  background-size: 56px 56px;
+  mask-image: radial-gradient(ellipse 75% 65% at 55% 35%, black, transparent);
+  animation: grid-drift 36s linear infinite;
+}
+
+.orbit-ring {
+  border: 1px solid color-mix(in oklab, var(--jade-bright) 35%, transparent);
+  border-radius: 9999px;
+}
+
+.orbit-ring-dashed {
+  border-style: dashed;
+  animation: spin 40s linear infinite;
+}
+
+.orbit-ring-soft {
+  animation: spin-rev 32s linear infinite;
+}
+
+.site-header {
+  backdrop-filter: blur(18px);
+  background: var(--header-bg);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.25s ease, background 0.25s ease;
+}
+
+.site-header.is-scrolled {
+  border-bottom-color: var(--line);
+  background: var(--header-bg-scrolled);
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.img-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.img-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 45%, color-mix(in oklab, var(--paper) 65%, transparent) 100%);
+  pointer-events: none;
+}
+
+.img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.img-frame:hover img {
+  transform: scale(1.04);
+}
+
+@keyframes grid-drift {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 56px 56px;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin-rev {
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-core {
+  0%,
+  100% {
+    box-shadow:
+      0 0 0 14px color-mix(in oklab, var(--jade-bright) 12%, transparent),
+      0 28px 70px color-mix(in oklab, var(--jade) 30%, transparent);
+  }
+  50% {
+    box-shadow:
+      0 0 0 22px color-mix(in oklab, var(--jade-bright) 18%, transparent),
+      0 34px 80px color-mix(in oklab, var(--jade) 38%, transparent);
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(28px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-rise {
+  animation: rise-in 1s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-rise-delay {
+  animation: rise-in 1.1s 0.12s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.animate-float {
+  animation: float-y 5.5s ease-in-out infinite;
+}
+
+.animate-core {
+  animation: pulse-core 3.8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero-grid,
+  .orbit-ring-dashed,
+  .orbit-ring-soft,
+  .animate-float,
+  .animate-core,
+  .animate-rise,
+  .animate-rise-delay {
+    animation: none !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
