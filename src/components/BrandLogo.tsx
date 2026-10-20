@@ -13,17 +13,17 @@ export function BrandLogo({
   priority?: boolean;
 }) {
   return (
-    <Link href={href} className="group flex items-center gap-2.5" aria-label="Altrevon home">
+    <Link href={href} className="group flex items-center gap-2.5" aria-label="Nexoryna home">
       <Image
         src="/images/logo.png"
-        alt="Altrevon"
+        alt="Nexoryna"
         width={size}
         height={size}
-        className="rounded-sm transition duration-300 group-hover:brightness-110"
+        className="rounded-md transition duration-300 group-hover:brightness-110"
         priority={priority}
       />
       {showWordmark && (
-        <span className="font-display text-[1.45rem] tracking-[-0.03em] text-ink">Altrevon</span>
+        <span className="font-display text-[1.45rem] tracking-[-0.03em] text-ink">Nexoryna</span>
       )}
     </Link>
   );

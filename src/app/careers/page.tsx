@@ -8,11 +8,11 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Join Altrevon — open roles in AI systems, blockchain engineering, product, and protocol design.",
+    "Join Nexoryna — open roles in AI systems, blockchain engineering, product, and protocol design.",
   openGraph: {
     title: `Careers | ${siteConfig.name}`,
     description:
-      "Join Altrevon — open roles in AI systems, blockchain engineering, product, and protocol design.",
+      "Join Nexoryna — open roles in AI systems, blockchain engineering, product, and protocol design.",
   },
 };
 

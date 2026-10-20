@@ -142,7 +142,7 @@ const en: Dictionary = {
     more: "Explore related products →",
   },
   apart: {
-    kicker: "Why Altrevon",
+    kicker: "Why Nexoryna",
     title: "What sets us apart",
   },
   insights: {
@@ -213,7 +213,7 @@ const en: Dictionary = {
     home: "Back to home",
     careers: "Careers",
   },
-  loading: "Loading Altrevon…",
+  loading: "Loading Nexoryna…",
 };
 
 export default en;

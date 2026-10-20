@@ -45,11 +45,11 @@ export type ContactPayload = {
 };
 
 export const fallbackCompany: Company = {
-  name: "Altrevon",
+  name: "Nexoryna",
   tagline: "AI systems and blockchain products that ship.",
   description:
-    "Altrevon builds blockchain & token infrastructure and AI-powered on-chain products — from smart contracts and tokenomics to agents that can act, settle, and prove results on-chain.",
-  email: "support@altrevon.com",
+    "Nexoryna builds blockchain & token infrastructure and AI-powered on-chain products — from smart contracts and tokenomics to agents that can act, settle, and prove results on-chain.",
+  email: "info@nexoryna.com",
   teamSize: 50,
   focus: ["Blockchain & Tokens", "AI + Blockchain Products", "Smart Contracts"],
 };
@@ -249,8 +249,8 @@ export type CareersData = {
 export const fallbackCareers: CareersData = {
   intro: {
     headline: "Build the rails of intelligent systems.",
-    lede: "Altrevon is a 50-person studio shipping AI and blockchain infrastructure. We hire people who care about craft, clarity, and systems that hold up in production.",
-    email: "support@altrevon.com",
+    lede: "Nexoryna is a 50-person studio shipping AI and blockchain infrastructure. We hire people who care about craft, clarity, and systems that hold up in production.",
+    email: "info@nexoryna.com",
   },
   benefits: [
     {

@@ -52,7 +52,7 @@ const zh = {
     more: "查看相关产品 →",
   },
   apart: {
-    kicker: "为什么选择 Altrevon",
+    kicker: "为什么选择 Nexoryna",
     title: "我们的不同之处",
   },
   insights: {
@@ -122,7 +122,7 @@ const zh = {
     home: "返回首页",
     careers: "招聘",
   },
-  loading: "正在加载 Altrevon…",
+  loading: "正在加载 Nexoryna…",
 } satisfies Dictionary;
 
 export default zh;

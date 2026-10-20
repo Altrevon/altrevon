@@ -102,15 +102,15 @@ const openingsByLocale: Record<Locale, Record<string, OpeningI18n>> = {
 const introByLocale: Record<Locale, { headline: string; lede: string }> = {
   en: {
     headline: "Build the rails of intelligent systems.",
-    lede: "Altrevon is a 50-person studio shipping AI and blockchain infrastructure. We hire people who care about craft, clarity, and systems that hold up in production.",
+    lede: "Nexoryna is a 50-person studio shipping AI and blockchain infrastructure. We hire people who care about craft, clarity, and systems that hold up in production.",
   },
   zh: {
     headline: "构建智能系统的基础设施。",
-    lede: "Altrevon 是一支 50 人团队，专注交付 AI 与区块链基础设施。我们寻找重视工艺、清晰度与生产级系统的人。",
+    lede: "Nexoryna 是一支 50 人团队，专注交付 AI 与区块链基础设施。我们寻找重视工艺、清晰度与生产级系统的人。",
   },
   es: {
     headline: "Construye las vías de los sistemas inteligentes.",
-    lede: "Altrevon es un estudio de 50 personas que entrega infraestructura AI y blockchain. Contratamos a quienes cuidan el oficio, la claridad y los sistemas que aguantan en producción.",
+    lede: "Nexoryna es un estudio de 50 personas que entrega infraestructura AI y blockchain. Contratamos a quienes cuidan el oficio, la claridad y los sistemas que aguantan en producción.",
   },
 };
 

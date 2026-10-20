@@ -1,4 +1,4 @@
-# Altrevon
+# Nexoryna
 
 Professional company website for an AI & blockchain studio.
 

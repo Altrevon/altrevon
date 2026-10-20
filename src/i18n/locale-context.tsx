@@ -41,7 +41,7 @@ export function LocaleProvider({
 
   useEffect(() => {
     try {
-      const stored = localStorage.getItem("altrevon-locale");
+      const stored = localStorage.getItem("nexoryna-locale");
       if (isLocale(stored) && stored !== locale) {
         void dictionaries[stored]().then((mod) => {
           setLocaleState(stored);
@@ -62,8 +62,8 @@ export function LocaleProvider({
     setDictionary(mod.default);
     document.documentElement.lang = next === "zh" ? "zh-CN" : next;
     try {
-      localStorage.setItem("altrevon-locale", next);
-      document.cookie = `altrevon-locale=${next}; path=/; max-age=31536000; samesite=lax`;
+      localStorage.setItem("nexoryna-locale", next);
+      document.cookie = `nexoryna-locale=${next}; path=/; max-age=31536000; samesite=lax`;
     } catch {
       /* ignore */
     }
@@ -93,7 +93,7 @@ export function useI18n() {
 export function readStoredLocale(): Locale {
   if (typeof window === "undefined") return defaultLocale;
   try {
-    const stored = localStorage.getItem("altrevon-locale");
+    const stored = localStorage.getItem("nexoryna-locale");
     if (isLocale(stored)) return stored;
   } catch {
     /* ignore */

@@ -60,7 +60,7 @@ const es = {
     more: "Explorar productos relacionados →",
   },
   apart: {
-    kicker: "Por qué Altrevon",
+    kicker: "Por qué Nexoryna",
     title: "Qué nos diferencia",
   },
   insights: {
@@ -131,7 +131,7 @@ const es = {
     home: "Volver al inicio",
     careers: "Carreras",
   },
-  loading: "Cargando Altrevon…",
+  loading: "Cargando Nexoryna…",
 } satisfies Dictionary;
 
 export default es;

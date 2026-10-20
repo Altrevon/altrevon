@@ -16,7 +16,7 @@ export function AppProviders({
   dictionary: Dictionary;
 }) {
   return (
-    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} storageKey="altrevon-theme">
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} storageKey="nexoryna-theme">
       <LocaleProvider locale={locale} dictionary={dictionary}>
         {children}
       </LocaleProvider>

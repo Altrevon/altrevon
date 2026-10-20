@@ -1,8 +1,8 @@
 {
-  "name": "altrevon",
+  "name": "nexoryna",
   "version": "1.0.0",
   "private": true,
-  "description": "Altrevon company website — Next.js",
+  "description": "Nexoryna company website — Next.js",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

@@ -1,13 +1,13 @@
 export const siteConfig = {
-  name: "Altrevon",
-  legalName: "Altrevon",
+  name: "Nexoryna",
+  legalName: "Nexoryna",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
   description:
-    "Altrevon builds blockchain & token infrastructure and AI-powered on-chain products — from smart contracts and tokenomics to agents that can act, settle, and prove results on-chain.",
-  email: "support@altrevon.com",
-  careersEmail: "support@altrevon.com",
-  telegram: "@eric_altrevon",
-  telegramUrl: "https://t.me/eric_altrevon",
+    "Nexoryna builds blockchain & token infrastructure and AI-powered on-chain products — from smart contracts and tokenomics to agents that can act, settle, and prove results on-chain.",
+  email: "info@nexoryna.com",
+  careersEmail: "info@nexoryna.com",
+  telegram: "@eric09124",
+  telegramUrl: "https://t.me/eric09124",
   tagline: "AI systems and blockchain products that ship.",
   teamSize: 50,
   nav: [
